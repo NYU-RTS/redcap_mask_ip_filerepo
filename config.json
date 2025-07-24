@@ -1,0 +1,16 @@
+{
+    "name": "Mask IP address",
+    "description": "Mask IP address on the File Repository web page",
+    "namespace": "NYU\\MaskIPFileRepoModule",
+    "framework-version": 14,
+    "authors": [
+        {
+            "name": "Wensheng Deng",
+            "email": "wd35@nyu.edu",
+            "institution": "New York University"
+        }
+    ],
+    "auth-ajax-actions": [
+	"loaded"
+    ]
+}
