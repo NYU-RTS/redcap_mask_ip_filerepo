@@ -13,9 +13,10 @@ ExternalModules.NYU.MaskIPFileRepoModule.ajax("loaded", {})
 		let tableParent = document.getElementById("file-repository-table-parent");
 		const callback = function(mutationsList, observer) {
 		    for (let mutation of mutationsList) {
-			if (mutation.target.className == "ItemListBreadcrumbs") {
+			const target = mutation.target;
+			if (target.classList && target.classList.contains("ItemListBreadcrumbs")) {
 			    let dwnlButton = mutation.target.getElementsByClassName("btn btn-xs btn-defaultrc text-successrc")[0]; 
-			    if (dwnlButton.innerText == " Download file list") {
+			    if (dwnlButton && dwnlButton.innerText.trim() === "Download file list") {
 				dwnlButton.disabled = true;
 				break;
 			    }
