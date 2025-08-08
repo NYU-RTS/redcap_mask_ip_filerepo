@@ -15,7 +15,7 @@ ExternalModules.NYU.MaskIPFileRepoModule.ajax("loaded", {})
 		    for (let mutation of mutationsList) {
 			const target = mutation.target;
 			if (target.classList && target.classList.contains("ItemListBreadcrumbs")) {
-			    let dwnlButton = mutation.target.getElementsByClassName("btn btn-xs btn-defaultrc text-successrc")[0]; 
+			    let dwnlButton = target.getElementsByClassName("btn btn-xs btn-defaultrc text-successrc")[0]; 
 			    if (dwnlButton && dwnlButton.innerText.trim() === "Download file list") {
 				dwnlButton.disabled = true;
 				break;
